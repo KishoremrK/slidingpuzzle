@@ -26,7 +26,7 @@ BODY{
    background-color: aqua;
    border-radius: 12px;
    top: 15%;
-   right: 40%;
+   right: 38%;
    width: 65px;
    font-size:20px;
    font-weight:bold;
@@ -40,7 +40,7 @@ BODY{
    background-color: aqua;
    border-radius: 12px;
    top: 15%;
-   left: 40%;
+   left: 38%;
    width: 65px;
    font-size:20px;
    font-weight:bold;
@@ -51,7 +51,7 @@ BODY{
 
 
 
-h{ 
+h { 
   font-family :Georgia;
   font-size :10px;
   font-style :italic ;
@@ -102,19 +102,64 @@ h{
         background-position: 0% 50%;
     }
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 650px) {
   .container {
     top:15%;
-    right:25px;
+    right:13%;
   }
   .container1
   { top:15%;
-    left:25px;}
+    left:13%;}
   
  #win
  { left:5%;
     width:90%;
     height: 90%;
+    font-size:20PX;
+     z-index=5;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 650px)
+ {
+  .container
+  { top:15%;
+    right:20%;
+    Z-index:-1;
+  }
+  .container1
+  { top:15%;
+    left:20%;
+    Z-index:-1;
+  }
+  
+ #win
+ { left:5%;
+    width:90%;
+    height:90%;
+    font-size:20PX;
+     z-index=5;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px)
+ {
+  .container
+  { top:15%;
+    right:30%;
+    Z-index:-1;
+  }
+  .container1
+  { top:15%;
+    left:30%;
+    Z-index:-1;
+  }
+  
+ #win
+ { left:5%;
+    width:90%;
+    height:90%;
     font-size:20PX;
      z-index=5;
   }
