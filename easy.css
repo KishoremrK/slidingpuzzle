@@ -164,3 +164,33 @@ h {
      z-index=5;
   }
 }
+@media screen and (max-width: 389px)
+ {
+  .container
+  { top:15%;
+    right:5%;
+    width: 35px;
+    font-size:10px;
+    text-align: center;
+    border: 2px solid red;
+    Z-index:-1;
+  }
+  .container1
+  { top:15%;
+    left:5%;
+    width: 35px;
+    font-size:10px;
+    text-align: center;
+    border: 2px solid red;
+    Z-index:-1;
+    Z-index:-1;
+  }
+  
+ #win
+ { left:5%;
+    width:90%;
+    height:90%;
+    font-size:20PX;
+    z-index=5;
+  }
+}
