@@ -1,3 +1,6 @@
+BODY {
+ background:#FFD700
+}
 .open
  { position :absolute;
    background-color:gold;
