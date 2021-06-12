@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link rel="stylesheet" href="hard.css"></link>
+<link rel="stylesheet" href="static/css/hard.css"></link>
 </head>
-<script src="hard.js"></script>
+<script src="static/js/hard.js"></script>
 <center>
  <br><br>       
   <div id="table2" style="display: table;border: solid black">
@@ -118,14 +118,17 @@
       <div id="k77" style="background-color: grey;"  onClick="clickTile(7,7);"></div>
  </div> 
   </div> <br> 
-  <button onClick="newgame2( );" style= "font-weight:bold;">NEW GAME</button>
-  <body onload ="hardreload();"></body>
+  <body onload ="reload();"></body>
+  <button onClick="resettimer( );" style= "font-weight:bold;">START</button>
+  <button onClick="reload( );" style= "font-weight:bold;">NEW </button>
+  <button onClick="reset( );" style= "font-weight:bold;">RESET</button>
+  
 </center>
 
  <div class="con1">
-    <div id="mov" ></div> 
-    <h>Moves</h>
- </div>                            
+   <div id="mov" ></div> 
+     <h>Moves</h>
+  </div>                            
 
  <div class="con2">               
     <div id="timer" ></div>
@@ -133,16 +136,15 @@
  </div>     
     
 <div id="minutes"></div>
-<div id="seconds"></div>                
-   
- 
+<div id="seconds"></div> 
+
 <div>
 <div id="win" >
   <p id="mess" style="font-family: Lucida Handwriting ;">CONGRAGULATIONS!!<br>YOU WIN!</p>    
-<p id="message1" style="color:gold; "></p>
-<p id="message2" style="color:gold; line-height:1px;"></p>  
- <button  id="button1"  onclick="location.href = 'index.html';"> OK! </button>
-<p id="message"></p>     
+  <p id="message1" style="color:gold; "></p>
+  <p id="message2" style="color:gold; line-height:1px;"></p>  
+  <button  id="button1"  onclick="location.href = 'index.html';"> OK! </button>
+  <p id="message"></p>     
 </div>
 </div>
 </html>
