@@ -1,9 +1,9 @@
 var y=0,r=0,w=0,l=0,o=0,b=0,g=0,p=0,move=0 ,s=0;
-const color5 =[["black","black","black","black","black"],
-               ["black","black","black","black","black"],
-               ["black","black","black","black","black"],
-               ["black","black","black","black","black"],
-               ["black","black","black","black","black"]];
+const color5 =[["","","","",""],
+               ["","","","",""],
+               ["","","","",""],
+               ["","","","",""],
+               ["","","","",""] ];               ];
 const color7 =[["","","","","","",""],
                ["","","","","","",""],
                ["","","","","","",""],
