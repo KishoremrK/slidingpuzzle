@@ -151,6 +151,26 @@ function stopTimer()
    document.getElementById("timer").innerHTML = m + ":" + s;    
 } 
 
+function reset()
+{ for (var row=1;row<=5;row++) { 
+  for (var col=1;col<=5;col++) { 
+      document.getElementById("c"+row+col) .style.backgroundColor = color5[row-1][col-1];
+    }
+   }
+  for (var row=1;row<=7;row++) { 
+  for (var col=1;col<=7;col++) { 
+      document.getElementById("k"+row+col) .style.backgroundColor = color7[row-1][col-1];
+    }
+   }
+ document.getElementById("mov") .innerHTML= 0; 
+ document.getElementById("win").style.display = "none";
+ move=0; totalSeconds = 0;
+ clearInterval(timeVar);
+ stopTimer(); 
+}
+
+
+
 function clickTile(row,column) {
    
   //Checking if grey tile on the right
