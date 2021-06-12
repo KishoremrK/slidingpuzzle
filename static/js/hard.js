@@ -1,17 +1,35 @@
-var y=0,r=0,w=0,l=0,o=0,b=0,g=0,p=0,move=0 ,s=0;;
+var y=0,r=0,w=0,l=0,o=0,b=0,g=0,p=0,move=0 ,s=0;
+const color5 =[["black","black","black","black","black"],
+               ["black","black","black","black","black"],
+               ["black","black","black","black","black"],
+               ["black","black","black","black","black"],
+               ["black","black","black","black","black"]];
+const color7 =[["","","","","","",""],
+               ["","","","","","",""],
+               ["","","","","","",""],
+               ["","","","","","",""], 
+               ["","","","","","",""],
+               ["","","","","","",""],
+               ["","","","","","",""]];
+
 function hardshuffle() 
- { y=0,r=0,w=0,l=0,o=0,b=0,g=0,p=0;
+{ y=0,r=0,w=0,l=0,o=0,b=0,g=0,p=0;
   for (var row=1;row<=7;row++) { 
-   for (var column=1;column<=7;column++) {  
-    if (row==7&&column==7)
-      {document.getElementById("k"+row+column) .style.backgroundColor = "black";} 
-    else{     
-    document.getElementById("k"+row+column) .style.backgroundColor = hardgetcolor();}
+    for (var column=1;column<=7;column++) {  
+      if (row==7&&column==7)
+         {document.getElementById("k"+row+column) .style.backgroundColor = "black";} 
+      else {     
+         document.getElementById("k"+row+column) .style.backgroundColor = hardgetcolor();}
+    } 
   } 
-} 
-  var row2=Math.floor(Math.random()*7 + 1); 
-    var column2=Math.floor(Math.random()*7 + 1); 
-       swapTiles("k77","k"+row2+column2); 
+   var row2=Math.floor(Math.random()*7 + 1); 
+   var column2=Math.floor(Math.random()*7 + 1); 
+   swapTiles("k77","k"+row2+column2); 
+   for (var row=1;row<=7;row++) { 
+     for (var column=1;column<=7;column++) {  
+        color7[row-1][column-1]= document.getElementById("k"+row+column) .style.backgroundColor;
+     } 
+   }   
 }
 
 
@@ -115,7 +133,7 @@ function resettimer()
   timeVar=setInterval(setTime, 1000);
 } 
 
-function hardreload()
+function reload()
 { hardsqshuffle();
  hardshuffle();
  document.getElementById("mov") .innerHTML= 0; 
@@ -132,12 +150,6 @@ function stopTimer()
    var s= document.getElementById("seconds").innerHTML ; 
    document.getElementById("timer").innerHTML = m + ":" + s;    
 } 
-
-
-function newgame2()
-{ hardreload();
-  resettimer();  
-}
 
 function clickTile(row,column) {
    
