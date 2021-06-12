@@ -38,6 +38,7 @@ function hardsqshuffle()
   for (var row=1;row<=5;row++) { 
   for (var col=1;col<=5;col++) { 
       document.getElementById("c"+row+col) .style.backgroundColor = hardgetcolor();
+      color5[row-1][col-1]= document.getElementById("c"+row+col) .style.backgroundColor;
      }
    }
 }  
