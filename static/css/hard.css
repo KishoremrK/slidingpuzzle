@@ -119,7 +119,7 @@ h {
     }
  }
 
-@media screen and (max-width: 600px) and (min-width: 390px)
+@media screen and (max-width: 600px) and (min-width: 350px)
  {
   .con1
   { top:15%;
@@ -185,7 +185,7 @@ h {
   }
 }
 
-@media screen and (max-width: 389px)
+@media screen and (max-width: 349px)
  {
   .con1
   { top:15%;
