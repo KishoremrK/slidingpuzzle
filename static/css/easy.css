@@ -81,7 +81,7 @@ h {
    padding: 4px 15px;
 }
 
- #button1 {
+ #button1,#button2 {
  background-color: blue; 
   position: absolute;
   bottom: 40px;
