@@ -76,6 +76,11 @@ h {
    z-index=5;
   }
 
+ button {
+   background-color: pink; 
+   padding: 4px 15px;
+}
+
  #button1 {
  background-color: blue; 
   position: absolute;
