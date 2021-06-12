@@ -228,14 +228,14 @@ function pad(val)
 
 function turn()
 { var temp = document.getElementById("player").innerHTML;
- alert(temp); 
- if(temp =="PLAYER 1")
+  if(temp =="PLAYER 1")
    { reset(); }
   else { result(); }
 }
 
 function result()
 { document.getElementById("win").style.display = "block";
+  document.getElementById("player").innerHTML="none";
   document.getElementById("button1").style.display = "none";
   document.getElementById("button2").style.display = "block";
   if (score1>score2)
