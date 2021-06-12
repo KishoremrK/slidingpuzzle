@@ -108,7 +108,7 @@ h {
     }
 }
 
-@media screen and (max-width: 650px) (min-width: 350px) {
+@media screen and (max-width: 650px) and (min-width: 350px) {
   .container {
     top:15%;
     right:13%;
