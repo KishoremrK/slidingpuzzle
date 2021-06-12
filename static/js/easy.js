@@ -1,13 +1,24 @@
 var move=0 ,s=0;
+const color3 =[["black","black","black"],["black","black","black"],["black","black","black"]];
+const color5 =[["black","black","black","black","black"],
+               ["black","black","black","black","black"],
+               ["black","black","black","black","black"],
+               ["black","black","black","black","black"],
+               ["black","black","black","black","black"]];
+
 function shuffle() {
-for (var row=1;row<=5;row++) { 
+ for (var row=1;row<=5;row++) { 
    for (var column=1;column<=5;column++) {  
-  
-    var row2=Math.floor(Math.random()*5 + 1); 
-    var column2=Math.floor(Math.random()*5 + 1); 
-       swapTiles("cell"+row+column,"cell"+row2+column2); 
-  } 
-} 
+      var row2=Math.floor(Math.random()*5 + 1); 
+      var column2=Math.floor(Math.random()*5 + 1); 
+      swapTiles("cell"+row+column,"cell"+row2+column2); 
+    } 
+ } 
+ for (var row=1;row<=5;row++) { 
+   for (var column=1;column<=5;column++) {  
+     color5[row-1][column-1]= document.getElementById("cell"+row+column).style.backgroundColor;
+   } 
+  }     
 }
 
 var y=0,r=0,w=0,l=0,o=0,b=0;
@@ -16,6 +27,7 @@ function sqshuffle()
   for (var row=1;row<=3;row++) { 
   for (var col=1;col<=3;col++) { 
       document.getElementById("s"+row+col) .style.backgroundColor = getcolor();
+      color3[row-1][col-1]= document.getElementById("s"+row+col) .style.backgroundColor;
      }
    }
 }  
@@ -71,10 +83,24 @@ function stopTimer()
 } 
 
 
-function newgame()
-{ reload();
-  resettimer();  
+function reset()
+{ for (var row=1;row<=5;row++) { 
+  for (var col=1;col<=5;col++) { 
+      document.getElementById("cell"+row+col) .style.backgroundColor = color5[row-1][col-1];
+    }
+   }
+  for (var row=1;row<=3;row++) { 
+  for (var col=1;col<=3;col++) { 
+      document.getElementById("s"+row+col) .style.backgroundColor = color3[row-1][col-1];
+    }
+   }
+ document.getElementById("mov") .innerHTML= 0; 
+ document.getElementById("win").style.display = "none";
+ move=0; totalSeconds = 0;
+ clearInterval(timeVar);
+ stopTimer(); 
 }
+
  
 
 function swapTiles(cell1,cell2) 
