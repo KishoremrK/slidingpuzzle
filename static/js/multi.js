@@ -235,7 +235,7 @@ function turn()
 
 function result()
 { document.getElementById("win").style.display = "block";
-  document.getElementById("player").innerHTML="none";
+  document.getElementById("player").style.display="none";
   document.getElementById("button1").style.display = "none";
   document.getElementById("button2").style.display = "block";
   if (score1>score2)
