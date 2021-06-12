@@ -108,7 +108,7 @@ h {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) (min-width: 350px) {
   .container {
     top:15%;
     right:13%;
@@ -169,7 +169,7 @@ h {
      z-index=5;
   }
 }
-@media screen and (max-width: 389px)
+@media screen and (max-width: 350px)
  {
   .container
   { top:15%;
