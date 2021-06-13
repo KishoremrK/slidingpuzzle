@@ -187,6 +187,7 @@ function issolved()
  var sec = document.getElementById("seconds").innerHTML;
  var min= document.getElementById("minutes").innerHTML;  
  document.getElementById("win").style.display = "block";
+ playsound(); 
  document.getElementById("message1").innerText=" MOVES : "+move ;
  document.getElementById("message2").innerText="TIME : "+min+":"+sec;  
  var s=score(min,sec,move); 
@@ -197,6 +198,12 @@ function issolved()
   else { score2 =s;
         move2=move;}
  } 
+
+
+function playsound()
+{ document.getElementById("myaudio").play();  }
+
+
 
 function score(min,sec,move)
 { min = min*60;
