@@ -66,7 +66,6 @@ function resettimer()
 function reload()
 {sqshuffle();
  shuffle();
- localStorage.clear();
  leaderboard();
  document.getElementById("mov") .innerHTML= 0; 
  document.getElementById("win").style.display = "none";
