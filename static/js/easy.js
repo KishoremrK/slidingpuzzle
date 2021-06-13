@@ -5,7 +5,6 @@ const color5 =[["black","black","black","black","black"],
                ["black","black","black","black","black"],
                ["black","black","black","black","black"],
                ["black","black","black","black","black"]];
-var audio =new Audio("clap.mp3");
 function shuffle() {
  for (var row=1;row<=5;row++) { 
    for (var column=1;column<=5;column++) {  
@@ -183,7 +182,6 @@ function issolved()
  var sec = document.getElementById("seconds").innerHTML;
  var min= document.getElementById("minutes").innerHTML;  
  document.getElementById("win").style.display = "block";
- audio.play();  
  document.getElementById("message1").innerText=" MOVES : "+move ;
  document.getElementById("message2").innerText="TIME : "+min+":"+sec;  
  var s=score(min,sec,move);
