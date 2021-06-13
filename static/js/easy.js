@@ -5,7 +5,7 @@ const color5 =[["black","black","black","black","black"],
                ["black","black","black","black","black"],
                ["black","black","black","black","black"],
                ["black","black","black","black","black"]];
-var audio =new Audio("clap.mp3");
+var audio =new Audio("static/audio/clap.mp3");
 function shuffle() {
  for (var row=1;row<=5;row++) { 
    for (var column=1;column<=5;column++) {  
@@ -55,7 +55,6 @@ function getcolor(){
     }  
 return(color);
 }
-
 
 
 function resettimer()
@@ -226,7 +225,8 @@ function topscorer(currentscore)
     { localStorage.setItem("topscore",currentscore);
       var name = prompt("ENTER YOUR NAME");
       localStorage.setItem("topscorername",name);
-      document.getElementById("message4").innerText=" YOU ARE THE TOP SCORER ";          }
+      document.getElementById("message4").innerText=" YOU ARE THE TOP SCORER "; 
+    }
   else
   { document.getElementById("message4").innerText=" TOP SCORE : "+highscore; }
 }
